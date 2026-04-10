@@ -1,8 +1,8 @@
 # luau-toolchain
 
-Production-grade Luau utilities for Roblox. Three independent, zero-dependency packages built around type correctness and predictable runtime behaviour.
+Luau-toolchain introduces production-grade Luau utilities for Roblox. They are three independent, zero-dependency packages that are built around type correctness and predictable runtime behavior.
 
-[![CI](https://github.com/matthewgervescu/luau-toolchain/actions/workflows/ci.yml/badge.svg)](https://github.com/matthewgervescu/luau-toolchain/actions)
+[![CI](https://github.com/mattecolors/luau-toolchain/actions/workflows/ci.yml/badge.svg)](https://github.com/mattecolors/luau-toolchain/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
@@ -258,4 +258,4 @@ stylua packages/
 
 ## License
 
-MIT © Matthew Gervescu
+MIT © mattecolors
