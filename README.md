@@ -2,7 +2,6 @@
 
 Luau-toolchain introduces production-grade Luau utilities for Roblox. They are three independent, zero-dependency packages that are built around type correctness and predictable runtime behavior.
 
-[(https://github.com/mattecolors/luau-toolchain/actions/workflows/ci.yml/badge.svg)](https://github.com/mattecolors/luau-toolchain/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
