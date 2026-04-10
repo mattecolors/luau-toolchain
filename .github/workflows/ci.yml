@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Luau Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rokit
+        run: |
+          curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
+          echo "$HOME/.rokit/bin" >> $GITHUB_PATH
+
+      - name: Install tools
+        run: rokit install
+
+      - name: Run Luau type check (luau-lsp)
+        run: |
+          luau-lsp analyze \
+            --flag:LuauTypeInfer=true \
+            packages/signal/init.luau \
+            packages/promise/init.luau \
+            packages/net/init.luau
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rokit
+        run: |
+          curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
+          echo "$HOME/.rokit/bin" >> $GITHUB_PATH
+
+      - name: Install tools
+        run: rokit install
+
+      - name: Serve with Rojo and run tests via Lune
+        run: lune run scripts/test.luau

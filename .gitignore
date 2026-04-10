@@ -1,0 +1,5 @@
+Packages/
+.wally/
+*.rbxl
+*.rbxlx
+node_modules/

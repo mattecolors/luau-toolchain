@@ -1,0 +1,13 @@
+[package]
+name = "luau-toolchain/luau-toolchain"
+description = "Production-grade Luau utilities: typed signals, promises, and a schema-validated network layer."
+version = "1.0.0"
+license = "MIT"
+authors = ["Matthew Gervescu"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Signal  = "luau-toolchain/signal@^1.0.0"
+Promise = "luau-toolchain/promise@^1.0.0"
+Net     = "luau-toolchain/net@^1.0.0"
